@@ -29,7 +29,8 @@ void wifictl_scan_nearby_aps(){
         .ssid = NULL,
         .bssid = NULL,
         .channel = 0,
-        .scan_type = WIFI_SCAN_TYPE_ACTIVE
+        .scan_type = WIFI_SCAN_TYPE_ACTIVE,
+        .show_hidden = 1
     };
     
     ESP_ERROR_CHECK(esp_wifi_scan_start(&scan_config, true));
